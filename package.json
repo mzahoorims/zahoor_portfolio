@@ -1,0 +1,14 @@
+{
+    "name": "zahoor-cv",
+    "version": "1.0.0",
+    "description": "Muhammad Zahoor - IT Engineer and DevOps Portfolio",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "node --watch index.js"
+    },
+    "dependencies": {
+        "ejs": "^3.1.10",
+        "express": "^5.1.0"
+    }
+}
