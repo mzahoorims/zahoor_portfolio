@@ -1,0 +1,57 @@
+<section id="projects" class="section projects-section">
+    <div class="container">
+        <!-- PROJECT HEADING -->
+        <div class="section-heading">
+            <span class="section-number">04</span>
+            <div>
+                <p class="section-label">PROJECTS</p>
+                <h2>Things I have <span>built.</span></h2>
+            </div>
+        </div>
+
+        <!-- CATEGORY FILTERS -->
+        <div class="project-filters" id="projectFilters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="devops">DevOps & Cloud</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-btn" data-filter="linux">Linux & Network</button>
+            <button class="filter-btn" data-filter="web">Web Apps</button>
+        </div>
+
+        <!-- PROJECT GRID -->
+        <div class="projects-grid" id="projectsGrid">
+            <% data.projects.forEach(function(project) { %>
+                <article class="project-card" data-category="<%= project.filterGroup %>">
+                    <div class="project-top">
+                        <span class="project-number"><%= project.number %></span>
+                        <div class="project-icon">
+                            <i class="<%= project.iconClass %>"></i>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <p class="project-category"><%= project.category %></p>
+                        <h3><%= project.title %></h3>
+                        <p class="project-description"><%= project.description %></p>
+                    </div>
+
+                    <div class="project-tech">
+                        <% project.technologies.forEach(function(tech) { %>
+                            <span><%= tech %></span>
+                        <% }); %>
+                    </div>
+
+                    <div class="project-footer">
+                        <% if (project.link) { %>
+                            <a href="<%= project.link %>" target="_blank" rel="noopener noreferrer" class="project-link">
+                                View Project <span>↗</span>
+                            </a>
+                        <% } else { %>
+                            <span class="project-no-link">No public link</span>
+                        <% } %>
+                    </div>
+                </article>
+            <% }); %>
+        </div>
+    </div>
+</section>

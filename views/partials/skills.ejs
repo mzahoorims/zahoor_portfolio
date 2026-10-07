@@ -1,0 +1,55 @@
+<section id="skills" class="section skills-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">03</span>
+            <div>
+                <p class="section-label">TECHNICAL SKILLS</p>
+                <h2>My technical <span>toolbox.</span></h2>
+            </div>
+        </div>
+
+        <div class="skills-grid">
+            <% data.skills.forEach(function(skillGroup) { %>
+                <div class="skill-category <%= skillGroup.featured ? 'featured-skill' : '' %>">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <%= skillGroup.icon %>
+                        </div>
+                        <div>
+                            <h3><%= skillGroup.category %></h3>
+                            <p><%= skillGroup.subtitle %></p>
+                        </div>
+                    </div>
+
+                    <div class="skill-list">
+                        <% skillGroup.items.forEach(function(item) { %>
+                            <span class="skill-chip"><%= item %></span>
+                        <% }); %>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+
+        <!-- DEVOPS PIPELINE -->
+        <div class="pipeline">
+            <div class="pipeline-heading">
+                <span>DEVOPS WORKFLOW</span>
+                <p>From code to production</p>
+            </div>
+
+            <div class="pipeline-flow">
+                <% data.pipeline.forEach(function(step, index) { %>
+                    <div class="pipeline-step">
+                        <div class="pipeline-number"><%= step.number %></div>
+                        <strong><%= step.name %></strong>
+                        <small><%= step.desc %></small>
+                    </div>
+
+                    <% if (index < data.pipeline.length - 1) { %>
+                        <div class="pipeline-arrow">→</div>
+                    <% } %>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</section>

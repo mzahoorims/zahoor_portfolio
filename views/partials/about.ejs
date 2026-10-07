@@ -1,0 +1,46 @@
+<section id="about" class="section about-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">01</span>
+            <div>
+                <p class="section-label">ABOUT ME</p>
+                <h2>Engineering with a <span>systems mindset.</span></h2>
+            </div>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-main">
+                <p class="about-lead">
+                    <%= data.about.lead %>
+                </p>
+
+                <p>
+                    <%= data.about.description %>
+                </p>
+
+                <p>
+                    <%= data.about.focus %>
+                </p>
+
+                <div class="about-tags">
+                    <% data.about.tags.forEach(function(tag) { %>
+                        <span><%= tag %></span>
+                    <% }); %>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <div class="about-card-icon">&lt;/&gt;</div>
+                <h3>What I Bring</h3>
+                <ul>
+                    <% data.about.highlights.forEach(function(item) { %>
+                        <li>
+                            <span><%= item.number %></span>
+                            <%= item.text %>
+                        </li>
+                    <% }); %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

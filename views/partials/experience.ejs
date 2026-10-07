@@ -1,0 +1,45 @@
+<section id="experience" class="section experience-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">02</span>
+            <div>
+                <p class="section-label">EXPERIENCE</p>
+                <h2>Where I have <span>worked.</span></h2>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <% data.experience.forEach(function(exp) { %>
+                <article class="experience-card">
+                    <div class="experience-date">
+                        <%= exp.period %>
+                    </div>
+
+                    <div class="experience-line">
+                        <span></span>
+                    </div>
+
+                    <div class="experience-content">
+                        <div class="experience-top">
+                            <div>
+                                <h3><%= exp.role %></h3>
+                                <p class="company"><%= exp.company %></p>
+                            </div>
+                            <% if (exp.location) { %>
+                                <span class="experience-location"><%= exp.location %></span>
+                            <% } %>
+                        </div>
+
+                        <p><%= exp.description %></p>
+
+                        <div class="experience-tags">
+                            <% exp.tags.forEach(function(tag) { %>
+                                <span><%= tag %></span>
+                            <% }); %>
+                        </div>
+                    </div>
+                </article>
+            <% }); %>
+        </div>
+    </div>
+</section>

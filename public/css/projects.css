@@ -6,6 +6,37 @@
     position: relative;
 }
 
+/* =========================================================
+   PROJECT FILTERS
+   ========================================================= */
+
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--text-soft);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: rgba(53, 214, 255, 0.12);
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 0 15px rgba(53, 214, 255, 0.15);
+}
+
 
 /* =========================================================
    PROJECT GRID

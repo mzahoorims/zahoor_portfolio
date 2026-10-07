@@ -1,0 +1,20 @@
+<footer class="footer">
+    <div class="container footer-container">
+        <div>
+            <a href="#home" class="footer-logo">
+                <%= data.profile.name %>
+            </a>
+            <p>IT Engineer • DevOps • Cloud • Security</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="<%= data.profile.socials.github %>" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="<%= data.profile.socials.linkedin %>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="<%= data.profile.socials.upwork %>" target="_blank" rel="noopener noreferrer">Upwork</a>
+        </div>
+
+        <div class="footer-bottom">
+            © <span id="year"></span> <%= data.profile.name %>. All rights reserved.
+        </div>
+    </div>
+</footer>
